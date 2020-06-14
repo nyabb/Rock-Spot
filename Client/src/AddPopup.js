@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Button from "@material-ui/core/Button";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import Dialog from "@material-ui/core/Dialog";
+import {
+  Button,
+  List,
+  ListItem,
+  ListItemText,
+  DialogTitle,
+  Dialog,
+} from "@material-ui/core";
 import { getPlaylists, addToPlaylist } from "./Utils/restUtils";
 
 const SimpleDialog = ({ onClose, selectedValue, open, songId }) => {
@@ -40,18 +42,27 @@ const SimpleDialog = ({ onClose, selectedValue, open, songId }) => {
       <DialogTitle id='playlist-chooser'>Playlist Chooser</DialogTitle>
 
       <List>
-        {playlists.map((playlist) => (
-          <ListItem
-            button
-            onClick={() => addToPlayList(playlist.id)}
-            key={playlist.id + songId}
-          >
+        {playlists.length > 0 ? (
+          playlists.map((playlist) => (
+            <ListItem
+              button
+              onClick={() => addToPlayList(playlist.id)}
+              key={playlist.id + songId}
+            >
+              <ListItemText
+                primary={playlist.name}
+                secondary={"Number of songs " + playlist.songs.length}
+              />
+            </ListItem>
+          ))
+        ) : (
+          <ListItem>
             <ListItemText
-              primary={playlist.name}
-              secondary={"Number of songs " + playlist.songs.length}
+              primary={"No playlists"}
+              secondary={"Create playlists"}
             />
           </ListItem>
-        ))}
+        )}
       </List>
     </Dialog>
   );

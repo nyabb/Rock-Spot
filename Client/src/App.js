@@ -1,11 +1,9 @@
 import React, { useState } from "react";
+import { Tabs, Tab, AppBar, TextField } from "@material-ui/core";
 import IScrollTable from "./IScrollTable";
 import CollapseList from "./CollapseList";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import AppBar from "@material-ui/core/AppBar";
 import TabPanel from "./TabPanel";
-import TextField from "@material-ui/core/TextField";
+import Cards from "./Cards";
 
 const App = () => {
   const [query, setQuery] = useState("");
@@ -54,7 +52,9 @@ const App = () => {
 
         <IScrollTable query={query} style={{ position: "relative" }} />
       </TabPanel>
-      <TabPanel value={value} index={1}></TabPanel>
+      <TabPanel value={value} index={1}>
+        <Cards />
+      </TabPanel>
       <TabPanel value={value} index={2}>
         <CollapseList selectedTab={value} />
       </TabPanel>

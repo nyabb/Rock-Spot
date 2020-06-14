@@ -1,20 +1,80 @@
 {
   "playlists": [
     {
-      "id": "Sun Jun 14 2020 13:28:55 GMT+0200 (Central European Summer Time)",
-      "name": "new playlist 2",
+      "id": "Sun Jun 14 2020 15:38:16 GMT+0200 (Central European Summer Time)",
+      "name": "test",
       "songs": [
         {
-          "id": 1046,
-          "name": "(Sittin' on the) Dock of the Bay (Take 2)",
-          "year": 1967,
-          "artist": "Otis Redding",
-          "shortname": "dockofthebay",
-          "bpm": 102,
-          "duration": 170025,
-          "genre": "R&B/Soul/Funk",
-          "spotifyId": "6Ud9fOJQ9ZO2qnsMFPiJsh",
-          "album": "Remember Me"
+          "id": 2238,
+          "name": "Hunger Strike",
+          "year": 1991,
+          "artist": "Temple of the Dog",
+          "shortname": "hungerstrike",
+          "bpm": 70,
+          "duration": 248318,
+          "genre": "Grunge",
+          "spotifyId": "0W7AbEauB7cP4pidLclApe",
+          "album": "Temple of the Dog"
+        },
+        {
+          "id": 1916,
+          "name": "Got Your Six",
+          "year": 2015,
+          "artist": "Five Finger Death Punch",
+          "shortname": "gotyoursix",
+          "bpm": 153,
+          "duration": 182744,
+          "genre": "Metal",
+          "spotifyId": "2MowFHnAi6uBP5DlNxXr6i",
+          "album": "Got Your Six"
+        },
+        {
+          "id": 2330,
+          "name": "Wrong Side Of Heaven",
+          "year": 2013,
+          "artist": "Five Finger Death Punch",
+          "shortname": "wrongsideofheaven",
+          "bpm": 150,
+          "duration": 267199,
+          "genre": "Metal",
+          "spotifyId": "7nErzYSlYWbf9oetHig5DZ",
+          "album": "The Wrong Side of Heaven and the Righteous Side of Hell, Volume 1"
+        },
+        {
+          "id": 453,
+          "name": "Handlebars",
+          "year": 2008,
+          "artist": "Flobots",
+          "shortname": "handlebars",
+          "bpm": 141,
+          "duration": 217947,
+          "genre": "Hip-Hop/Rap",
+          "spotifyId": "0AeTz3FTxR08dgRCoDeDDP",
+          "album": "Fight With Tools"
+        },
+        {
+          "id": 1122,
+          "name": "Crackity Jones",
+          "year": 1989,
+          "artist": "Pixies",
+          "shortname": "crackityjones",
+          "bpm": 150,
+          "duration": 88249,
+          "genre": "Alternative",
+          "spotifyId": "1yuwn054ErrOWqjjk51ldD",
+          "album": "Doolittle"
+        },
+        {
+          "id": 1123,
+          "name": "Dead",
+          "year": 1989,
+          "artist": "Pixies",
+          "shortname": "dead",
+          "bpm": 120,
+          "duration": 147668,
+          "genre": "Alternative",
+          "spotifyId": "5fAUch0HNiHxqLEc6a1t68",
+          "album": "Doolittle"
         },
         {
           "id": 190,
@@ -39,42 +99,6 @@
           "genre": "Metal",
           "spotifyId": "1VfdMD8JguRISrccgLifIZ",
           "album": "Back From The Dead"
-        },
-        {
-          "id": 1858,
-          "name": "(I Just) Died in Your Arms",
-          "year": 1986,
-          "artist": "Cutting Crew",
-          "shortname": "ijustdiedinyourarms",
-          "bpm": 126,
-          "duration": 285745,
-          "genre": "New Wave",
-          "spotifyId": "4ByEFOBuLXpCqvO1kw8Wdm",
-          "album": "Broadcast"
-        },
-        {
-          "id": 1557,
-          "name": "(If You're Wondering If I Want You To) I Want You To",
-          "year": 2009,
-          "artist": "Weezer",
-          "shortname": "iwantyouto",
-          "bpm": 110,
-          "duration": 211635,
-          "genre": "Alternative",
-          "spotifyId": "7akwKkIS6sp7Orbq7LEj5a",
-          "album": "Raditude"
-        },
-        {
-          "id": 1073,
-          "name": "(Reprise) Sandblasted Skin",
-          "year": 1996,
-          "artist": "Pantera",
-          "shortname": "sandblastedskin",
-          "bpm": 190,
-          "duration": 212208,
-          "genre": "Metal",
-          "spotifyId": "1LkjMNCu16QUwHJbzTqPnR",
-          "album": "The Great Southern Trendkill"
         }
       ]
     }

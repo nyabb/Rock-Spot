@@ -1,24 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import ExpansionPanelActions from "@material-ui/core/ExpansionPanelActions";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-import DeleteIcon from "@material-ui/icons/Delete";
-import IconButton from "@material-ui/core/IconButton";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+import {
+  Button,
+  FormControl,
+  ExpansionPanel,
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+  ExpansionPanelActions,
+  Typography,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  IconButton,
+  TextField,
+  Divider,
+} from "@material-ui/core";
 
-import Divider from "@material-ui/core/Divider";
+import { ExpandMore, Delete } from "@material-ui/icons";
+
 import {
   getPlaylists,
   createPlaylist,
@@ -73,20 +76,28 @@ const CollapseList = ({ selectedTab }) => {
 
   return (
     <div className={classes.root}>
-      <TextField
-        id='standard-basic'
-        label='Enter name'
-        value={name}
-        onChange={handleNameChange}
-      />
-      <Button size='large' color='primary' onClick={addPlaylist}>
-        Create playlist
-      </Button>
+      <FormControl style={{ width: 200, padding: 12 }}>
+        <TextField
+          id='standard-basic'
+          label='Enter name'
+          value={name}
+          onChange={handleNameChange}
+        />
+        <Button
+          size='small'
+          color='primary'
+          variant='outlined'
+          onClick={addPlaylist}
+          style={{ width: 200, marginTop: 5 }}
+        >
+          Create playlist
+        </Button>
+      </FormControl>
       {playlists
         ? playlists.map((playlist) => (
             <ExpansionPanel key={playlist.id}>
               <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ExpandMore />}
                 aria-controls='panel1a-content'
                 id='panel1a-header'
               >
@@ -121,7 +132,7 @@ const CollapseList = ({ selectedTab }) => {
                               <IconButton
                                 onClick={() => deleteSong(playlist.id, song.id)}
                               >
-                                <DeleteIcon />
+                                <Delete />
                               </IconButton>
                             </TableCell>
                           </TableRow>
@@ -140,6 +151,7 @@ const CollapseList = ({ selectedTab }) => {
                 <Button
                   size='small'
                   color='primary'
+                  variant='outlined'
                   onClick={() => removePlaylist(playlist.id)}
                 >
                   Delete playlist
