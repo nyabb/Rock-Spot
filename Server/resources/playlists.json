@@ -1,0 +1,82 @@
+{
+  "playlists": [
+    {
+      "id": "Sun Jun 14 2020 13:28:55 GMT+0200 (Central European Summer Time)",
+      "name": "new playlist 2",
+      "songs": [
+        {
+          "id": 1046,
+          "name": "(Sittin' on the) Dock of the Bay (Take 2)",
+          "year": 1967,
+          "artist": "Otis Redding",
+          "shortname": "dockofthebay",
+          "bpm": 102,
+          "duration": 170025,
+          "genre": "R&B/Soul/Funk",
+          "spotifyId": "6Ud9fOJQ9ZO2qnsMFPiJsh",
+          "album": "Remember Me"
+        },
+        {
+          "id": 190,
+          "name": "(Don't Fear) The Reaper",
+          "year": 1975,
+          "artist": "Blue Öyster Cult",
+          "shortname": "dontfearthereaper",
+          "bpm": 141,
+          "duration": 322822,
+          "genre": "Classic Rock",
+          "spotifyId": "5QTxFnGygVM4jFQiBovmRo",
+          "album": "Agents of Fortune"
+        },
+        {
+          "id": 1363,
+          "name": "(Funky) Sex Farm",
+          "year": 2009,
+          "artist": "Spinal Tap",
+          "shortname": "funkysexfarm",
+          "bpm": 107,
+          "duration": 260068,
+          "genre": "Metal",
+          "spotifyId": "1VfdMD8JguRISrccgLifIZ",
+          "album": "Back From The Dead"
+        },
+        {
+          "id": 1858,
+          "name": "(I Just) Died in Your Arms",
+          "year": 1986,
+          "artist": "Cutting Crew",
+          "shortname": "ijustdiedinyourarms",
+          "bpm": 126,
+          "duration": 285745,
+          "genre": "New Wave",
+          "spotifyId": "4ByEFOBuLXpCqvO1kw8Wdm",
+          "album": "Broadcast"
+        },
+        {
+          "id": 1557,
+          "name": "(If You're Wondering If I Want You To) I Want You To",
+          "year": 2009,
+          "artist": "Weezer",
+          "shortname": "iwantyouto",
+          "bpm": 110,
+          "duration": 211635,
+          "genre": "Alternative",
+          "spotifyId": "7akwKkIS6sp7Orbq7LEj5a",
+          "album": "Raditude"
+        },
+        {
+          "id": 1073,
+          "name": "(Reprise) Sandblasted Skin",
+          "year": 1996,
+          "artist": "Pantera",
+          "shortname": "sandblastedskin",
+          "bpm": 190,
+          "duration": 212208,
+          "genre": "Metal",
+          "spotifyId": "1LkjMNCu16QUwHJbzTqPnR",
+          "album": "The Great Southern Trendkill"
+        }
+      ]
+    }
+  ]
+}
