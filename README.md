@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project root directory, you can run:
 
 ### `yarn install`
 
@@ -24,11 +24,10 @@ Runs available tests.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
+Builds the Client side app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
 ## Available Features
 
@@ -41,5 +40,5 @@ Your app is ready to be deployed!
 
 ## Missing
 
-- unit test, code coverage
+- unit test
 - styling
