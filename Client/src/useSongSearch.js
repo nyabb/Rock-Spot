@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getSongs } from "./Utils/restUtils";
 
-export default function useSongSearch(query, pageNumber) {
+export default function useSongSearch(query, pageNumber, playlists) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [songs, setSongs] = useState([]);
@@ -26,7 +26,7 @@ export default function useSongSearch(query, pageNumber) {
         console.warn("Error:");
         setError(true);
       });
-  }, [query, pageNumber]);
+  }, [query, pageNumber, playlists]);
 
   return { loading, error, songs, hasMore };
 }

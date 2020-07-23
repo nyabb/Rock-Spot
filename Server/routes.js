@@ -68,7 +68,6 @@ const _getSongs = (req, res) => {
   if (songs) {
     res.jsonp(songs);
   } else {
-    res.message = "No songs found";
     res.sendStatus(404);
   }
 };

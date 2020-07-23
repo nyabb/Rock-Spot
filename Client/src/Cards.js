@@ -47,9 +47,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecipeReviewCard() {
+export default function Cards({ playlists, addToPlaylist }) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState("");
+  const [expanded, setExpanded] = React.useState(false);
   const [expandedCardId, setExpandedCardId] = React.useState("");
   const [refresh, setRefresh] = React.useState(false);
   const [artists, setArtists] = React.useState([]);
@@ -57,7 +57,6 @@ export default function RecipeReviewCard() {
   const [songsByArtist, setSongsByArtist] = React.useState([]);
 
   const handleExpandClick = (name, id) => {
-    console.log(name);
     setCurrentArtists(name);
     setExpandedCardId(name + id);
     setExpanded(!expanded);
@@ -66,9 +65,7 @@ export default function RecipeReviewCard() {
   useEffect(() => {
     getArtists()
       .then((res) => {
-        console.log();
         setArtists(_.sampleSize(res.data, 20));
-        setExpandedCardId("");
       })
       .catch((e) => {
         console.warn("Error:", e);
@@ -80,7 +77,7 @@ export default function RecipeReviewCard() {
   useEffect(() => {
     getSongsByArtist(currentArtists)
       .then((res) => {
-        console.log();
+        console.log("res.data", res.data);
         setSongsByArtist(res.data);
       })
       .catch((e) => {
@@ -93,7 +90,7 @@ export default function RecipeReviewCard() {
       <Typography variant='h6' color='textPrimary' component='div'>
         Get 20 random artists
       </Typography>
-      <IconButton onClick={() => setRefresh(true)} aria-label='refresh'>
+      <IconButton onClick={() => setRefresh(!refresh)} aria-label='refresh'>
         <RefreshIcon />
       </IconButton>
       {artists
@@ -113,7 +110,7 @@ export default function RecipeReviewCard() {
                   Some info about the artist
                 </Typography>
               </CardContent>
-              <CardActions disableSpacing>
+              <CardActions>
                 <IconButton
                   className={clsx(classes.expand, {
                     [classes.expandOpen]: Boolean(
@@ -161,7 +158,11 @@ export default function RecipeReviewCard() {
                               <TableCell align='center'>{song.genre}</TableCell>
                               <TableCell align='center'>{song.bpm}</TableCell>
                               <TableCell align='center'>
-                                <AddPopup songId={song.id} />
+                                <AddPopup
+                                  playlists={playlists}
+                                  songId={song.id}
+                                  addToPlaylist={addToPlaylist}
+                                />
                               </TableCell>
                             </TableRow>
                           ))

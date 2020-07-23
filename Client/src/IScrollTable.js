@@ -13,7 +13,7 @@ import {
 
 import AddPopup from "./AddPopup";
 
-const IScrollTable = ({ query }) => {
+const IScrollTable = ({ query, playlists, addToPlaylist }) => {
   const [pageNumber, setPageNumber] = useState(1);
 
   const { songs, hasMore, loading, error } = useSongSearch(query, pageNumber);
@@ -43,7 +43,7 @@ const IScrollTable = ({ query }) => {
     },
     [loading, hasMore]
   );
-
+  console.log("IScrollTable", playlists);
   return (
     <div>
       <TableContainer component={Paper} style={{ marginTop: 10 }}>
@@ -75,7 +75,13 @@ const IScrollTable = ({ query }) => {
                       <TableCell align='center'>{song.genre}</TableCell>
                       <TableCell align='center'>{song.bpm}</TableCell>
                       <TableCell align='center'>
-                        <AddPopup songId={song.id} />
+                        {playlists && (
+                          <AddPopup
+                            playlists={playlists}
+                            songId={song.id}
+                            addToPlaylist={addToPlaylist}
+                          />
+                        )}
                       </TableCell>
                     </TableRow>
                   );
